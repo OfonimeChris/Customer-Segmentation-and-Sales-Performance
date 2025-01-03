@@ -3,6 +3,9 @@
 ## Table of Content
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
+- [Tools](#tools)
+- [Data Cleaning/ Preparation](#data-cleaning/ preparation)
+  
 
 
 ### Project Overview
@@ -17,7 +20,6 @@ The primary data used for this analysis is the "sales data.csv" file containing 
 - Excel - data cleaning
 - Python -data cleaning and anaysis
 - Tableaux - creating Reports
-
   
 
 ### Data Cleaning/ Preparation
@@ -26,34 +28,38 @@ The primary data used for this analysis is the "sales data.csv" file containing 
  - Handling missing values,duplicate removed and correction of inconsistencies (e.g., outliers, incorrect data formats)
  - Data cleaning and formatting
 
-### Exploratory Data Analysis
+
+
+### Eploratory Data Analysis
 EDA involves exploring the sales data to answer key questions:
-    ### Customer Segmentation
-    -How are customers distributed across different segments (e.g., customer_segment, region, state, city)
-    -How does customer age correlate with sales, order quantity, or discount usage?
-    -Which product categories or subcategories are preferred by different customer segments?
+  ### Customer Segmentation
+  - How are customers distriibuted accross different segments (e.g customer_segment, region, state, city)
+  - How does customer age correlate with sales, order quantity, or discount usage?
+  - which product categories or subcategories are preferred by different customer segments?
+    
+### Sales Analysis
+  - what is the overall slaes trend?
+  - what are the top-performing regions, state, or cities in terms of sales and profit?
+  - How do slaes and profit vary by product category, sub-category, or container type?
+  - Which cuomer segments are the most and least profitable?
+  - What is the average order quantity, and des it differ significantly across region or customer segments?
+  - How do discount impact sales and profit margins?
 
-     ###Sales Analysis
-    -what is the overall sales trend
-    -What are the top-performing regions, states, or cities in terms of sales and profit?
-    -How do sales and profit vary by product category, sub-category, or container type?
-    -Which customer segments are the most and least profitable?
-    -What is the average order quantity, and does it differ significantly across regions or customer segments?
-    -How do discounts impact sales and profit margins?
+### Retention and Loyalty
+  - How frequently so customers place orders, and what is the average time between purchases?
+  - Are there any patterns in customer purchasing behavior over time?
+  - Which customer segments have the highest lifetime value(e.g, cumulative sales/profit)?
+  - What is the realtionship between shipping cost, mode, and customer retention?
+  - Are high-priority orders associated with better profitability or retention?
 
-    ###Retention and Loyalty
-    -How frequently do customers place orders, and what is the average time between purchases?
-    -Are there any patterns in customer purchasing behavior over time?
-    -Which customer segments have the highest lifetime value (e.g., cumulative sales/profit)?
-    -What is the relationship between shipping cost, mode, and customer retention?
-    -Are high-priority orders associated with better profitability or retention?
-
-     ###Revenue Growth Optimization
-    -Which product categories or subcategories offer the highest margins?
-    -How do shipping costs affect profitability across different regions or segments?
-    -Are there correlations between order date (seasonality) and sales or profit?
-    -Which regions or customer segments respond most positively to discounts?
-    -What are the trends in unit price and product margin, and how do they relate to profit?
+### Revenue Growth Optimitization 
+- Which product categories or subcategories offer the higest margins?
+- How do shipping costs affect profitability across different regions or segments?
+- Are there correlations between order data(seasonality) and sales or profit?
+- Which regions or customer segments respond most positivelyto discounts?
+- What is the trend in unit price and profit margin and how do they relate to profit?
+    
+  
 
 ### Data Analysis
 ##### Data Preprocessing: 
@@ -183,8 +189,8 @@ for name, entry in models.items():
 - Tableau
 
 ### Results and Findings
-    The analysis/results are summarized as follows:
-    When analyzing Churn,  i realized that the model achieved a perfect accuracy of 1.0000, indicating that it correctly classified all instances influence by 
+  The analysis/results are summarized as follows:
+  When analyzing Churn,  i realized that the model achieved a perfect accuracy of 1.0000, indicating that it correctly classified all instances influence by 
     Day_since_last_order column,  Day_since_last_order was the most important feature suggests that customer inactivity is a strong predictor of churn. This aligns with 
     intuition, as customers who haven't made purchases in a long time are more likely to churn. other features like "profit," "shipping cost," and "customer age" likely 
     contribute to the model's overall performance as well.
