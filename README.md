@@ -145,29 +145,26 @@ for name, entry in models.items():
         ('regressor', entry['model'])
     ])
     
-    # Use GridSearchCV for hyperparameter tuning
-    grid_search = GridSearchCV(
-        model,
-        entry['params'],
-        cv=3,  # 3-fold cross-validation
-        scoring='neg_mean_squared_error',
-        n_jobs=-1
-    )
-    grid_search.fit(X_train, y_train)
     
-    # Best model and parameters
-    best_model = grid_search.best_estimator_
-    best_params = grid_search.best_params_
-    best_models[name] = (best_model, best_params)
-    
-    # Evaluate the model
-    y_pred = best_model.predict(X_test)
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-    
-    print(f"Best Parameters for {name}: {best_params}")
-    print(f"{name} - Mean Squared Error: {mse:.4f}")
-    print(f"{name} - R^2 Score: {r2:.4f}\n")
+# Hyperparameter tuning using GridSearchCV
+grid_search = GridSearchCV(model, entry['params'], cv=3,
+scoring='neg_mean_squared_error', n_jobs=-1)
+grid_search.fit(X_train, y_train)
+
+# Best model and parameters
+best_model = grid_search.best_estimator_
+best_params = grid_search.best_params_
+best_models[name] = (best_model, best_params)
+
+# Evaluate the model
+y_pred = best_model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"Best Parameters for {name}: {best_params}")
+print(f"{name} - Mean Squared Error: {mse:.4f}")
+print(f"{name} - R^2 Score: {r2:.4f}\n")
+
 
   ### Result
   Training model: Random Forest
@@ -227,6 +224,7 @@ marketing stretegies should be promoted in these segment and regions
   13. Implementation of loyalty programs to reward repeat customers and encourage repeat purchases.
 
 ### Limitations
+
 
 ### References
 
