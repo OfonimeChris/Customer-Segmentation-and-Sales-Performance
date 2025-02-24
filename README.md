@@ -18,16 +18,19 @@ The primary data used for this analysis is the "sales data.csv" file containing 
 
 ### Tools
 - Excel - data cleaning
-- Python -data cleaning and anaysis
-- Tableaux - creating Reports
+- Python -data cleaning and analysis(EDA-Exploratory Data Analysis)
+- Tableau - Visualization
+- Machine Learning - Analysis and Predictions
   
-
+  
 ### Data Cleaning/ Preparation
- in the initial data phase, we performed the following task:
- - Data download and inspection
+ The initial data phase, we performed the following task:
+ - Dataset download and inspection
  - Handling missing values,duplicate removed and correction of inconsistencies (e.g., outliers, incorrect data formats)
  - Data cleaning and formatting
-
+ - EDA(Exploratory Data Analysis
+ - Data Preprocessing
+ - Machine Learning used for analysis and predictions
 
 
 ### Eploratory Data Analysis
@@ -183,22 +186,23 @@ print(f"{name} - R^2 Score: {r2:.4f}\n")
   Linear Regression - R^2 Score: 0.2675
 
 
-- Tableau
-
 ### Results and Findings
   The analysis/results are summarized as follows:
-  When analyzing Churn,  i realized that the model achieved a perfect accuracy of 1.0000, indicating that it correctly classified all instances influence by 
-    Day_since_last_order column,  Day_since_last_order was the most important feature suggests that customer inactivity is a strong predictor of churn. This aligns with 
-    intuition, as customers who haven't made purchases in a long time are more likely to churn. other features like "profit," "shipping cost," and "customer age" likely 
-    contribute to the model's overall performance as well.
+  When analyzing Churn, Ii realized that the model achieved a perfect accuracy of 1.0000, indicating that it correctly classified all instances influence by 
+  Day_since_last_order column,  Day_since_last_order was the most important feature suggests that customer inactivity is a strong predictor of churn. This aligns with 
+  intuition, as customers who haven't made purchases in a long time are more likely to churn. other features like "profit," "shipping cost," and "customer age" likely 
+  contribute to the model's overall performance as well.
 
 -Recommendation: Company can segment customers based on their churn risk and tailor retention strategies accordingly. Also can offer personalized incentives, discounts, or loyalty programs to retain high-value customers. Customer Feedback can also be gotten to understand reasons for churning and identify areas for improvement.
 -The company had a slow sales with 0-2000 over the years with a spike during holiday periods, I also discovered that the home office customer segment drove the most revenue and the central and east region also make the higest sales performance.
 marketing stretegies should be promoted in these segment and regions
 
 
--Product Category A is the best categorgy in termsof generating sales and revenue
+-Product Category A is the best categorgy in terms of generating sales and revenue
 -Customer Segment with high life time value should be targeted for marketing efforts
+
+Machine Learning Predicture
+These three different algorithms used for predictions were; Linear Regression, random Forest regression and XGBoost.  XGBoodt showed  high R-squared score compared to linear and random forest model, this indicated a good generalzation of the XGBoost model on the the dataset, leading to good predictions for sales performance.
 
 ### Recommendations
   Based on the analysis, I will recommend the following actions to be taken:
@@ -224,9 +228,15 @@ marketing stretegies should be promoted in these segment and regions
   13. Implementation of loyalty programs to reward repeat customers and encourage repeat purchases.
 
 ### Limitations
-
+- bad data formatting, took alot of time to clean and make it reasonable
+- some columns were not representative of what it should be. e.g the profit_base_margin column showed accumulated profit over time maybe for everyweek as sales come , so this didnt make sense for my analysis, i had to generate a new profit column with order_quantity and unit_price features. and this made a lot of sense in term how much profit each product generated per day, week, month and the three years in total.
 
 ### References
+https://scikit-learn.org/stable/index.html
+
+https://www.geeksforgeeks.org/confusion-matrix-machine-learning
+
+https://docs.python.org/3/
 
 
 ​
