@@ -228,8 +228,8 @@ These three different algorithms used for predictions were; Linear Regression, r
   13. Implementation of loyalty programs to reward repeat customers and encourage repeat purchases.
 
 ### Limitations
-- bad data formatting, took alot of time to clean and make it reasonable
-- some columns were not representative of what it should be. e.g the profit_base_margin column showed accumulated profit over time maybe for everyweek as sales come , so this didnt make sense for my analysis, i had to generate a new profit column with order_quantity and unit_price features. and this made a lot of sense in term how much profit each product generated per day, week, month and the three years in total.
+- Bad data formatting, took alot of time to clean and make it reasonable
+- Some columns were not representative of what it should be. e.g the profit_base_margin column showed accumulated profit over time maybe for everyweek as sales come , so this didnt make sense for my analysis, i had to generate a new profit column with order_quantity and unit_price features. and this made a lot of sense in term how much profit each product generated per day, week, month and the three years in total.
 
 ### References
 https://scikit-learn.org/stable/index.html
